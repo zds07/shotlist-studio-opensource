@@ -1,4 +1,4 @@
-# shotlist-studio · 短视频分镜脚本转换器
+# yueji-geshizhuanhua · 短视频分镜脚本转换器
 
 把甲方原始稿（docx / xlsx / 自由文本）一键转换为标准化的短视频分镜拍摄脚本 xlsx。
 
@@ -25,7 +25,7 @@
 ## 文件结构
 
 ```
-shotlist-studio/
+yueji-geshizhuanhua/
 ├── SKILL.md                     # skill 主入口：触发条件、制作流程、判断规则
 ├── references/
 │   ├── format-spec.md           # 格式规范（列结构 / 视觉 / 打印设置）
@@ -43,22 +43,22 @@ shotlist-studio/
 ### 方式 1：作为 WorkBuddy / Claude Code / Codex 等 Agent skill 安装
 
 ```bash
-# 任意 agent 平台通用安装路径：~/.{platform}/skills/shotlist-studio/
-git clone https://github.com/zds07/shotlist-studio-opensource.git \
-  ~/.workbuddy/skills/shotlist-studio
+# 任意 agent 平台通用安装路径：~/.{platform}/skills/yueji-geshizhuanhua/
+git clone https://github.com/zds07/yueji-geshizhuanhua.git \
+  ~/.workbuddy/skills/yueji-geshizhuanhua
 # 或
-git clone https://github.com/zds07/shotlist-studio-opensource.git \
-  ~/.claude/skills/shotlist-studio
+git clone https://github.com/zds07/yueji-geshizhuanhua.git \
+  ~/.claude/skills/yueji-geshizhuanhua
 # 或
-git clone https://github.com/zds07/shotlist-studio-opensource.git \
-  ~/.codex/skills/shotlist-studio
+git clone https://github.com/zds07/yueji-geshizhuanhua.git \
+  ~/.codex/skills/yueji-geshizhuanhua
 ```
 
 ### 方式 2：作为 Python 包本地使用
 
 ```bash
-git clone https://github.com/zds07/shotlist-studio-opensource.git
-cd shotlist-studio-opensource
+git clone https://github.com/zds07/yueji-geshizhuanhua.git
+cd yueji-geshizhuanhua
 python3 -m venv .venv
 source .venv/bin/activate
 pip install openpyxl python-docx
@@ -157,20 +157,11 @@ for act in data["acts"]:
 | `sfx` | 音效 |  | 现场音 / 配乐描述 |
 | `reference` | 参考画面 |  | 没给参考图时留空 |
 
-## 安装
+## 在 Agent 中的触发示例
 
-把仓库克隆到 `~/.workbuddy/skills/shotlist-studio/` 即可被 WorkBuddy / Claude Code / Codex / Grok 等 Agent 自动识别：
+把甲方原始稿（`.doc` / `.docx` / `.md` / 自由文本）丢给 Agent，让它按 SKILL.md 的流程做。例如：
 
-```bash
-git clone https://github.com/zds07/shotlist-studio-opensource.git \
-  ~/.workbuddy/skills/shotlist-studio
-```
-
-## 使用
-
-把甲方原始稿（`.doc` / `.docx` / `.md` / 自由文本）丢给 Agent，让它按 SKILL.md 的流程做。下面是触发示例：
-
-- "按 shotlist-studio 流程，把这份甲方稿做成客户经理示例的一天那种格式"
+- "按 yueji-geshizhuanhua 流程，把这份甲方稿做成客户经理示例的一天那种格式"
 - "把这份银行拍摄脚本整理成制作版"
 - "我的脚本是 .doc 格式，老格式，先转 txt 再走 skill"
 
