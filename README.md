@@ -157,6 +157,23 @@ for act in data["acts"]:
 | `sfx` | 音效 |  | 现场音 / 配乐描述 |
 | `reference` | 参考画面 |  | 没给参考图时留空 |
 
+## 安装
+
+把仓库克隆到 `~/.workbuddy/skills/shotlist-studio/` 即可被 WorkBuddy / Claude Code / Codex / Grok 等 Agent 自动识别：
+
+```bash
+git clone https://github.com/zds07/shotlist-studio-opensource.git \
+  ~/.workbuddy/skills/shotlist-studio
+```
+
+## 使用
+
+把甲方原始稿（`.doc` / `.docx` / `.md` / 自由文本）丢给 Agent，让它按 SKILL.md 的流程做。下面是触发示例：
+
+- "按 shotlist-studio 流程，把这份甲方稿做成客户经理示例的一天那种格式"
+- "把这份银行拍摄脚本整理成制作版"
+- "我的脚本是 .doc 格式，老格式，先转 txt 再走 skill"
+
 ## License
 
 MIT — 自由使用、修改、商用。引用时附仓库地址即可。
